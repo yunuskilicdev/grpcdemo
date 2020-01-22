@@ -18,7 +18,6 @@ public class GrpcClient {
 		this(ManagedChannelBuilder.forAddress(host, port).usePlaintext());
 	}
 	
-	
 	public GrpcClient(ManagedChannelBuilder<?> channelBuilder) {
 		channel = channelBuilder.build();
 		blockingStub = AddressGuideGrpc.newBlockingStub(channel);
@@ -29,8 +28,7 @@ public class GrpcClient {
 		GrpcClient grpcClient = null;
 		try{
 			grpcClient = new GrpcClient("127.0.0.1", 8980);
-			AddressBook addressBook = grpcClient.getAddressBook(Person.newBuilder().build());
-			int a = 3;
+			AddressBook addressBook = grpcClient.getAddressBook(Person.newBuilder().build());;
 		}catch (Exception e){
 		
 		}finally {

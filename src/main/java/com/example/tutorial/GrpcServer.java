@@ -63,7 +63,6 @@ public class GrpcServer {
 		}
 	}
 	
-	
 	private static class AddressGuideService extends AddressGuideGrpc.AddressGuideImplBase {
 		private final Collection<AddressBook> addressbookCollection;
 		
@@ -80,8 +79,5 @@ public class GrpcServer {
 		private AddressBook getAddressBook() {
 			return AddressBook.newBuilder().addPeople(Person.newBuilder().build()).build();
 		}
-		
-		
 	}
-	
 }
